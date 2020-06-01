@@ -20,7 +20,6 @@ const PREApp: React.FC = () =>  {
             <Route exact component={PREInputComponent} />
           </BrowserRouter>
         </Provider>
-        <PREInputComponent />
     </div>
   );
 }

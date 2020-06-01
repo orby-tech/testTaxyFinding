@@ -1,7 +1,7 @@
 import React, { Component, useState }  from 'react';
 
 import Button from 'react-bootstrap/Button';
-import Input from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 import  { connect } from 'react-redux';
 
 interface Props {}
@@ -16,8 +16,8 @@ class PREInputComponent extends  React.Component<Props, State>{
     render() {
         return (
             <>
-                <Input />
-                <Button />
+                <FormControl aria-describedby="basic-addon2"/>
+                <Button variant="outline-primary" > Find </Button>
             </>
         )
     }
