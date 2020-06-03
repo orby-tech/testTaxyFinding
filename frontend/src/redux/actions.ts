@@ -1,9 +1,9 @@
-import  { ALL_CATALOG, CATALOG, NEW_ARTICLES_LIST, TOP_ARTICLES_LIST } from './types'
+import  { FIND_CARS } from './types'
 
 
-export function setAllCatalog(catalog: any) {
+export function findCars(catalog: any) {
 	return {
-		type: ALL_CATALOG,
-		catalog: catalog
+		type: FIND_CARS,
+		findedCars: catalog
 	}
 }

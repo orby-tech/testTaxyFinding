@@ -1,4 +1,1 @@
-export const ALL_CATALOG = 'ALL_CATALOG'
-export const CATALOG = 'CATALOG'
-export const NEW_ARTICLES_LIST ='NEW_ARTICLES_LIST'
-export const TOP_ARTICLES_LIST ='TOP_ARTICLES_LIST'
+export const FIND_CARS = 'FIND_CARS'
