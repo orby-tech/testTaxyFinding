@@ -1,17 +1,31 @@
 import React, { Component, useState } from 'react';
-import { YMaps, Map } from 'react-yandex-maps';
+import { YMaps, Map, Placemark } from 'react-yandex-maps';
 
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 import { connect } from 'react-redux';
 
 interface Props { }
-interface State { }
+interface State { 
+    clickedArea: Array<any> | undefined,
+    carsCoordinates: Array<any>
+}
+const carsCoordinates = [
+    [56.860581, 53.209223]
+  ];
+
+
+
+const defaultState ={ center: [56.839439, 53.218803], zoom: 14 }
+
 
 class PREMap extends React.Component<Props, State>{
     constructor(props: Props) {
         super(props);
-
+        this.state = {
+            clickedArea: undefined,
+            carsCoordinates: []
+        }
     }
 
     render() {
@@ -19,7 +33,10 @@ class PREMap extends React.Component<Props, State>{
 
             <>
                 <YMaps>
-                    <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+                    <Map defaultState={defaultState}>
+                    {carsCoordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                    <Placemark geometry={this.state.clickedArea} />
+                    </Map>
                 </YMaps>
             </>
         )
