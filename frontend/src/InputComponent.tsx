@@ -17,11 +17,19 @@ class PREInputComponent extends  React.Component<Props, State>{
         return (
             
             <>
-                <FormControl aria-describedby="basic-addon2"/>
+                <FormControl 
+                 className="inputGroup__input"
+                 placeholder="Откуда"
+                 aria-describedby="basic-addon2"/>
                 <Button variant="outline-primary" > Find </Button>
             </>
         )
     }
 
 }
-export default PREInputComponent
+const mapStateToProps = (state: any) => {
+    return state;
+  }
+  
+  const InputComponent = connect(mapStateToProps)(PREInputComponent);
+export default InputComponent

@@ -5,8 +5,10 @@ import { Route , BrowserRouter } from 'react-router-dom';
 import  { rootReducer } from './redux/rootReducer'
 import  { connect } from 'react-redux'
 import  {  createStore } from 'redux'
-import PREInputComponent from "./InputComponent"
+import InputComponent from "./InputComponent"
+import FindedCar from "./FindedCar"
 
+import YandexMap from "./Map"
 
 
 const store = createStore(rootReducer)
@@ -17,7 +19,9 @@ const PREApp: React.FC = () =>  {
     <div className="App">
         <Provider store={store}>
           <BrowserRouter>
-            <Route exact component={PREInputComponent} />
+            <Route exact component={InputComponent} />
+            <Route exact component={FindedCar} />
+            <Route exact component={YandexMap} />
           </BrowserRouter>
         </Provider>
     </div>
