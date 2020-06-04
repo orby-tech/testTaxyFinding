@@ -36,7 +36,7 @@ class PREInputComponent extends  React.Component<Props, State>{
         console.log(this.state.find.toLowerCase().split(/[.,\/#!$%\^&\*;:{}=\-_`~() ]/))
         if (this.state.find.toLowerCase().indexOf("пушкинская") !== -1 
             && this.state.find.toLowerCase().indexOf("144") !== -1){
-            alert("finded")
+            
             let raw = {
                 source_time:20130101010101,
                 addresses:[

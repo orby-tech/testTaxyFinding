@@ -7,6 +7,10 @@ interface Props {
 interface State {
     car: any
 }
+const sortByDistance = (a:any, b:any) => {
+    return (a.distance - b.distance)
+}
+
 
 class PREFindedCar extends  React.Component<Props, State>{
     constructor(props: Props) {
@@ -18,8 +22,11 @@ class PREFindedCar extends  React.Component<Props, State>{
       }
     componentDidUpdate(prevProps:any){
         if (prevProps.findedCars !== this.props.findedCars){
-            let tempArr = this.props.findedCars
-            this.setState({car: tempArr})
+            let AllFindedCars: string = this.props.findedCars
+
+            let sortedList: Array<any> = JSON.parse(AllFindedCars).sort(sortByDistance)
+
+            this.setState({car: sortedList[0]})
         }
     }
     render() {
@@ -27,7 +34,14 @@ class PREFindedCar extends  React.Component<Props, State>{
             
             <>
                 <div> Подходящий экипаж </div>
-                {this.state.car}
+                <div>
+                    {this.state.car.car_mark}{this.state.car.car_model}
+                    <br/>
+                    {this.state.car.car_color}
+                    <br/>
+                    {this.state.car.car_number}
+
+                </div>
             </>
         )
     }
