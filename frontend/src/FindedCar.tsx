@@ -21,12 +21,14 @@ class PREFindedCar extends  React.Component<Props, State>{
    
       }
     componentDidUpdate(prevProps:any){
-        if (prevProps.findedCars !== this.props.findedCars){
+        if (prevProps.findedCars !== this.props.findedCars  &&  this.props.findedCars){
             let AllFindedCars: string = this.props.findedCars
 
             let sortedList: Array<any> = JSON.parse(AllFindedCars).sort(sortByDistance)
 
             this.setState({car: sortedList[0]})
+        } else if (prevProps.findedCars !== this.props.findedCars){
+            this.setState({car: []})
         }
     }
     render() {

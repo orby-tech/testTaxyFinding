@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 import  { connect } from 'react-redux';
 
-import  { findCars } from './redux/actions'
+import  { findCars, setArea, setAltArea } from './redux/actions'
 
 import  ServiceAPI  from  './ServiceAPI';
 
@@ -14,7 +14,8 @@ const  service  =  new ServiceAPI();
 
 interface Props {
     findedCars:any,
-    dispatch: any
+    dispatch: any,
+    area: any
 }
 interface State {
     find: string
@@ -23,19 +24,30 @@ interface State {
 class PREInputComponent extends  React.Component<Props, State>{
     constructor(props: Props) {
         super(props);
-        this.findAdress =this.findAdress.bind(this)
+        this.findCars =this.findCars.bind(this)
         this.state = {
             find: ""
         }
       }
-    findAdress(event: React.ChangeEvent<HTMLInputElement>){
-        this.setState({find: event.target.value})
+    componentDidUpdate(prevProps:any){
+        if (prevProps.area !== this.props.area && this.props.area && this.props.area.addresses){
+            let temp = this.props.area.addresses
+            console.log(temp[0].lon, temp[0])
+            this.setState({find: temp[0].addres})
+        } else if (prevProps.area !== this.props.area){
+            this.setState({find: ""})
+        }
     }
-    findCars () {
-        let tempArr: string[] = this.state.find.toLowerCase().split(/[.,\/#!$%\^&\*;:{}=\-_`~()]/)
-        console.log(this.state.find.toLowerCase().split(/[.,\/#!$%\^&\*;:{}=\-_`~() ]/))
-        if (this.state.find.toLowerCase().indexOf("пушкинская") !== -1 
-            && this.state.find.toLowerCase().indexOf("144") !== -1){
+    getTaxy(){
+        console.log("dg")
+    }
+    findCars (event: React.ChangeEvent<HTMLInputElement>) {
+        let value: string = event.target.value
+        this.setState({find: value})
+        let tempArr: string[] = value.toLowerCase().split(/[.,\/#!$%\^&\*;:{}=\-_`~()]/)
+
+        if (value.toLowerCase().indexOf("пушкинская") !== -1 
+            && value.toLowerCase().indexOf("144") !== -1){
             
             let raw = {
                 source_time:20130101010101,
@@ -49,9 +61,12 @@ class PREInputComponent extends  React.Component<Props, State>{
             }
             service.findCars(raw).then( (result) => {
                 this.props.dispatch(findCars(result))
+                this.props.dispatch(setArea(raw))
+                this.props.dispatch(setAltArea(null))
             })
         } else {
-            alert(" Вероятно вы искали:  Пушкинская, 144?")
+            this.props.dispatch(findCars(""))
+            this.props.dispatch(setArea(""))
         }
     }
     render() {
@@ -60,10 +75,10 @@ class PREInputComponent extends  React.Component<Props, State>{
             <>
                 <input 
                  className="form-control inputGroup__input"
-                 onChange={this.findAdress}
+                 onChange={this.findCars}
                  value={this.state.find}
                  aria-describedby="basic-addon2"/>
-                <Button onClick={() => this.findCars()} > Найти машины </Button>
+                <Button onClick={() => this.getTaxy()} > Заказать </Button>
             </>
         )
     }
@@ -71,7 +86,8 @@ class PREInputComponent extends  React.Component<Props, State>{
 }
 const mapStateToProps = (state: any) => {
     return {
-        findedCars: state.findedCars
+        findedCars: state.findedCars,
+        area: state.area
     };
   }
   
