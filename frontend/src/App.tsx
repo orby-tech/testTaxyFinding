@@ -7,7 +7,7 @@ import  { connect } from 'react-redux'
 import  {  createStore } from 'redux'
 import InputComponent from "./InputComponent"
 import FindedCar from "./FindedCar"
-
+import ListOfCars from "./ListOfCars"
 import YandexMap from "./Map"
 
 
@@ -22,6 +22,7 @@ const PREApp: React.FC = () =>  {
             <Route exact component={InputComponent} />
             <Route exact component={FindedCar} />
             <Route exact component={YandexMap} />
+            <Route exact component={ListOfCars} />
           </BrowserRouter>
         </Provider>
     </div>
