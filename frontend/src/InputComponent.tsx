@@ -58,7 +58,6 @@ class PREInputComponent extends  React.Component<Props, State>{
         return (
             
             <>
-                {this.props.findedCars}
                 <input 
                  className="form-control inputGroup__input"
                  onChange={this.findAdress}

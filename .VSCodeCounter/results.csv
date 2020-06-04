@@ -1,0 +1,18 @@
+"filename", "language", "XML", "CSS", "TypeScript React", "TypeScript", "JavaScript", "comment", "blank", "total"
+"/home/oem/React/testTaxyFinding/frontend/src/App.css", "CSS", 0, 4, 0, 0, 0, 0, 2, 6
+"/home/oem/React/testTaxyFinding/frontend/src/App.test.js", "JavaScript", 0, 0, 0, 0, 8, 0, 2, 10
+"/home/oem/React/testTaxyFinding/frontend/src/App.tsx", "TypeScript React", 0, 0, 29, 0, 0, 0, 7, 36
+"/home/oem/React/testTaxyFinding/frontend/src/FindedCar.tsx", "TypeScript React", 0, 0, 37, 0, 0, 0, 6, 43
+"/home/oem/React/testTaxyFinding/frontend/src/InputComponent.tsx", "TypeScript React", 0, 0, 67, 0, 0, 0, 12, 79
+"/home/oem/React/testTaxyFinding/frontend/src/Map.tsx", "TypeScript React", 0, 0, 40, 0, 0, 0, 11, 51
+"/home/oem/React/testTaxyFinding/frontend/src/ServiceAPI.ts", "TypeScript", 0, 0, 0, 44, 0, 2, 4, 50
+"/home/oem/React/testTaxyFinding/frontend/src/index.css", "CSS", 0, 12, 0, 0, 0, 0, 2, 14
+"/home/oem/React/testTaxyFinding/frontend/src/index.tsx", "TypeScript React", 0, 0, 18, 0, 0, 3, 3, 24
+"/home/oem/React/testTaxyFinding/frontend/src/logo.svg", "XML", 7, 0, 0, 0, 0, 0, 1, 8
+"/home/oem/React/testTaxyFinding/frontend/src/react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 1, 1, 2
+"/home/oem/React/testTaxyFinding/frontend/src/redux/actions.ts", "TypeScript", 0, 0, 0, 7, 0, 0, 3, 10
+"/home/oem/React/testTaxyFinding/frontend/src/redux/rootReducer.ts", "TypeScript", 0, 0, 0, 11, 0, 0, 5, 16
+"/home/oem/React/testTaxyFinding/frontend/src/redux/types.ts", "TypeScript", 0, 0, 0, 1, 0, 0, 0, 1
+"/home/oem/React/testTaxyFinding/frontend/src/serviceWorker.js", "JavaScript", 0, 0, 0, 0, 98, 31, 13, 142
+"/home/oem/React/testTaxyFinding/frontend/src/setupTests.js", "JavaScript", 0, 0, 0, 0, 1, 4, 1, 6
+"Total", "-", 7, 16, 191, 63, 107, 41, 73, 498

@@ -1,0 +1,45 @@
+Date : 2020-06-03 23:20:07
+Directory : /home/oem/React/testTaxyFinding/frontend/src
+Total : 16 files,  384 codes, 41 comments, 73 blanks, all 498 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| TypeScript React |          5 |        191 |          3 |         39 |        233 |
+| JavaScript       |          3 |        107 |         35 |         16 |        158 |
+| TypeScript       |          5 |         63 |          3 |         13 |         79 |
+| CSS              |          2 |         16 |          0 |          4 |         20 |
+| XML              |          1 |          7 |          0 |          1 |          8 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         16 |        384 |         41 |         73 |        498 |
+| redux                                                             |          3 |         19 |          0 |          8 |         27 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                          | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/oem/React/testTaxyFinding/frontend/src/App.css              | CSS              |          4 |          0 |          2 |          6 |
+| /home/oem/React/testTaxyFinding/frontend/src/App.test.js          | JavaScript       |          8 |          0 |          2 |         10 |
+| /home/oem/React/testTaxyFinding/frontend/src/App.tsx              | TypeScript React |         29 |          0 |          7 |         36 |
+| /home/oem/React/testTaxyFinding/frontend/src/FindedCar.tsx        | TypeScript React |         37 |          0 |          6 |         43 |
+| /home/oem/React/testTaxyFinding/frontend/src/InputComponent.tsx   | TypeScript React |         67 |          0 |         12 |         79 |
+| /home/oem/React/testTaxyFinding/frontend/src/Map.tsx              | TypeScript React |         40 |          0 |         11 |         51 |
+| /home/oem/React/testTaxyFinding/frontend/src/ServiceAPI.ts        | TypeScript       |         44 |          2 |          4 |         50 |
+| /home/oem/React/testTaxyFinding/frontend/src/index.css            | CSS              |         12 |          0 |          2 |         14 |
+| /home/oem/React/testTaxyFinding/frontend/src/index.tsx            | TypeScript React |         18 |          3 |          3 |         24 |
+| /home/oem/React/testTaxyFinding/frontend/src/logo.svg             | XML              |          7 |          0 |          1 |          8 |
+| /home/oem/React/testTaxyFinding/frontend/src/react-app-env.d.ts   | TypeScript       |          0 |          1 |          1 |          2 |
+| /home/oem/React/testTaxyFinding/frontend/src/redux/actions.ts     | TypeScript       |          7 |          0 |          3 |         10 |
+| /home/oem/React/testTaxyFinding/frontend/src/redux/rootReducer.ts | TypeScript       |         11 |          0 |          5 |         16 |
+| /home/oem/React/testTaxyFinding/frontend/src/redux/types.ts       | TypeScript       |          1 |          0 |          0 |          1 |
+| /home/oem/React/testTaxyFinding/frontend/src/serviceWorker.js     | JavaScript       |         98 |         31 |         13 |        142 |
+| /home/oem/React/testTaxyFinding/frontend/src/setupTests.js        | JavaScript       |          1 |          4 |          1 |          6 |
+| Total                                                             |                  |        384 |         41 |         73 |        498 |
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+
