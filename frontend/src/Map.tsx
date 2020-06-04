@@ -106,7 +106,7 @@ class PREMap extends React.Component<Props, State>{
 
             <>
                 <YMaps>
-                    <Map onClick={(e: any) => this.clickEvent(e)}
+                    <Map className="map__map" onClick={(e: any) => this.clickEvent(e)}
                         defaultState={defaultState}>
                     {this.state.carsCoordinates.map(coordinate =>  <Placemark geometry={coordinate}/>)}
                     {this.placemarkClick()}

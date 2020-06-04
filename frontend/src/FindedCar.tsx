@@ -34,17 +34,17 @@ class PREFindedCar extends  React.Component<Props, State>{
     render() {
         return (
             
-            <>
-                <div> Подходящий экипаж </div>
+            <div className="findedCar">
+                <h3> Подходящий экипаж </h3>
                 <div>
-                    {this.state.car.car_mark}{this.state.car.car_model}
-                    <br/>
-                    {this.state.car.car_color}
-                    <br/>
-                    {this.state.car.car_number}
+                    <h2>{this.state.car.car_mark} {this.state.car.car_model}</h2>
+                    
+                    <p>{this.state.car.car_color}</p>
+                    
+                    <p className="findedCar__number">{this.state.car.car_number}</p>
 
                 </div>
-            </>
+            </div>
         )
     }
 

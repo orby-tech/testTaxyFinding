@@ -1,6 +1,45 @@
 @import  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+.App {
+    padding: 30px;
+}
+.inputGroup {
+    display: grid;
 
-
+    grid-template-columns: 300px 150px;
+    grid-gap: 20px;
+}
 .inputGroup__input {
     width: 300px;
+}
+.inputGroup__button {
+    width: 150px;
+}
+.findedCar {
+    border: 1px solid #bbbbbb; 
+    width: 470px;
+    height: 170px;
+    position: relative;
+    padding: 10px;
+}
+.findedCar__number {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.map__map {
+    width: 470px;
+    height: 300px;
+}
+.listOfCars {
+    width: 470px;
+    height: auto;
+}
+.listOfCars__element {
+    border: 1px solid #bbbbbb; 
+    position: relative;
+}
+.listOfCars__line {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
 }

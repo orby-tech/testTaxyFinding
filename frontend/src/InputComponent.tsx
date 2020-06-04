@@ -72,14 +72,14 @@ class PREInputComponent extends  React.Component<Props, State>{
     render() {
         return (
             
-            <>
+            <div className="inputGroup">
                 <input 
                  className="form-control inputGroup__input"
                  onChange={this.findCars}
                  value={this.state.find}
                  aria-describedby="basic-addon2"/>
-                <Button onClick={() => this.getTaxy()} > Заказать </Button>
-            </>
+                <Button className="inputGroup__button" onClick={() => this.getTaxy()} > Заказать </Button>
+            </div>
         )
     }
 

@@ -32,21 +32,18 @@ class PREListOfCars extends  React.Component<Props, State>{
         }
     }
     render() {
-        return (            
-            <>
-                <div>
-                    {this.state.cars.map( function (global : any) { return (
-                    <>
-                        {global.car_mark}{global.car_model}
-                        <br/>
-                        {global.car_color}
-                        <br/>
-                        {global.distance}
-                    </>)}
-                    )}
+        return (   
+            <div className="listOfCars">
+                {this.state.cars.map( function (global : any) { return (
+                <div className="listOfCars__element">
+                    <h4>{global.car_mark} {global.car_model}</h4>
+                    {global.car_color}          
+                    <p className="listOfCars__line"> {global.distance} </p>
+                    
+                </div>)}
+                )}
 
-                </div>
-            </>
+            </div>
         )
     }
 
