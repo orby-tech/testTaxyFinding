@@ -1,8 +1,6 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
 
-import Button from 'react-bootstrap/Button';
-import FormControl from 'react-bootstrap/FormControl';
 import { connect } from 'react-redux';
 import { setArea, findCars, setAltArea } from './redux/actions';
 import  ServiceAPI  from  './ServiceAPI';
@@ -18,7 +16,6 @@ interface State {
     clickedArea: Array<any> | undefined,
     carsCoordinates: Array<any>    
 }
-const carsCoordinates = [ undefined ];
 
 const createCarsList = ( resp : any[] ) => {
     let list : any[]= []

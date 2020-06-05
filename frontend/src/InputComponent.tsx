@@ -1,4 +1,4 @@
-import React, { Component, useState }  from 'react';
+import React  from 'react';
 
 import Button from 'react-bootstrap/Button';
 
@@ -10,7 +10,16 @@ import  ServiceAPI  from  './ServiceAPI';
 
 const  service  =  new ServiceAPI();
 
-
+let raw = {
+    source_time:20130101010101,
+    addresses:[
+        {
+        addres:"Пушкинская, 144",
+        lat:56.839439,
+        lon:53.218803
+        }
+    ]
+}
 
 interface Props {
     findedCars:any,
@@ -39,26 +48,23 @@ class PREInputComponent extends  React.Component<Props, State>{
         }
     }
     getTaxy(){
-        console.log("dg")
+        service.order(raw).then ((result ) => {
+            if (result && result) {
+                alert("your order's id" + result)
+                this.props.dispatch(findCars(null))
+                this.props.dispatch(setArea(null))
+                this.props.dispatch(setAltArea(null))
+            }
+        })
     }
     findCars (event: React.ChangeEvent<HTMLInputElement>) {
         let value: string = event.target.value
         this.setState({find: value})
-        let tempArr: string[] = value.toLowerCase().split(/[.,\/#!$%\^&\*;:{}=\-_`~()]/)
 
         if (value.toLowerCase().indexOf("пушкинская") !== -1 
             && value.toLowerCase().indexOf("144") !== -1){
             
-            let raw = {
-                source_time:20130101010101,
-                addresses:[
-                    {
-                    addres:"Пушкинская, 144",
-                    lat:56.839439,
-                    lon:53.218803
-                    }
-                ]
-            }
+
             service.findCars(raw).then( (result) => {
                 this.props.dispatch(findCars(result))
                 this.props.dispatch(setArea(raw))

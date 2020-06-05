@@ -1,5 +1,3 @@
-import  { connect } from 'react-redux'
-import React from 'react';
 
 interface Props {
 }
@@ -38,12 +36,27 @@ const cars = {
         
     }
 
+const answer = {
+    code:0,
+    descr:"OK",
+    data:{
+    order_id:12345
+    }
+}
+
 export default  class ServiceAPI {
 	findCars(raw: Object) {
         
 		return new Promise ((resolve, reject) => {
             console.log(JSON.stringify(cars.data))
             resolve (JSON.stringify(cars.data));
+        })
+    }
+    order(raw: Object) {
+        
+		return new Promise ((resolve, reject) => {
+            console.log(JSON.stringify(answer.data))
+            resolve (JSON.stringify(answer.data.order_id));
         })
     }
 }
