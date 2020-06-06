@@ -48,14 +48,12 @@ export default  class ServiceAPI {
 	findCars(raw: Object) {
         
 		return new Promise ((resolve, reject) => {
-            console.log(JSON.stringify(cars.data))
             resolve (JSON.stringify(cars.data));
         })
     }
     order(raw: Object) {
         
 		return new Promise ((resolve, reject) => {
-            console.log(JSON.stringify(answer.data))
             resolve (JSON.stringify(answer.data.order_id));
         })
     }

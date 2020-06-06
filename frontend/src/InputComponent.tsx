@@ -3,7 +3,6 @@ import React  from 'react';
 import Button from 'react-bootstrap/Button';
 
 import  { connect } from 'react-redux';
-
 import  { findCars, setArea, setAltArea } from './redux/actions'
 
 import  ServiceAPI  from  './ServiceAPI';
